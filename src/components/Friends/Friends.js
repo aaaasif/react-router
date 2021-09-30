@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react';
 
 const Friends = () => {
     const [user, setUsers] = useState([]);
-    useEffect(,)
+    useEffect(() =>{
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(res=> res.json())
+        .then(data => setUsers(data));
+    }, [])
     return (
         <div>
-            <h1>this is friends zone</h1>
+            <h1>I have {user.length} friends.</h1>
         </div>
     );
 };
