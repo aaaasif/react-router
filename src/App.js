@@ -20,6 +20,12 @@ function App() {
           <Route path='/friends'>
             <Friends></Friends>
           </Route>
+          <Route exact path='/'>
+            <Home></Home>
+          </Route>
+          <Route path='/'>
+            <NotFound></NotFound>
+          </Route>
         </Switch>
       </BrowserRouter>
     </div>
